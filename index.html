@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./script.js" defer></script>
+  <title> EXOUSIA 2024 </title>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body>
+  <header></header>
+  <h2> EXOUSIA 2024 QR Ticket Generator</h2>
+  <main>
+    <div class="content">
+      <h2 style="text-align: center;"> EXOUSIA 2024 Event Details</h2>
+      <div>
+        <p><strong>Date:</strong> December 07, 2024</p>
+        <p><strong>Time:</strong> 07:00 PM</p>
+        <p><strong>Venue:</strong> Hotel Green Court, Homagama</p>
+      </div>
+      <p>Enter your details below to generate a QR Code and download your ticket.</p>
+      <form id="generate-form">
+        <input id="first-name" type="text" placeholder="First Name" class="inputfield" />
+        <input id="last-name" type="text" placeholder="Last Name" class="inputfield" />
+        <input id="ticket-id" type="text" placeholder="Ticket ID" class="inputfield" />
+        <input id="company-name" type="text" placeholder="Company Name" class="inputfield" />
+        <input id="job-position" type="text" placeholder="Job Position" class="inputfield" />
+        <select class="selected" name="size" id="size">
+          <option value="100">100x100</option>
+          <option value="200">200x200</option>
+          <option value="300" selected>300x300</option>
+          <option value="400">400x400</option>
+          <option value="500">500x500</option>
+          <option value="600">600x600</option>
+          <option value="700">700x700</option>
+        </select>
+        <button class="submit" type="submit">Generate Your Ticket</button>
+        <button class="reset" type="button" id="reset-btn">Reset</button>
+      </form>
+    </div>
+  </main>
+  <div id="generated">
+    <div id="spinner" class="loader"></div>
+    <div id="qrcode"></div>
+  </div>
+</body>
+</html>
